@@ -1,0 +1,132 @@
+.main {
+    width: 100%;
+    padding-top: 100px;
+}
+
+.header {
+    padding: 8rem 0 4rem;
+    background-color: var(--background);
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.pageTitle {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    color: var(--primary);
+    line-height: 0.9;
+    letter-spacing: -1px;
+}
+
+.servicesSection {
+    background-color: var(--background);
+}
+
+.serviceRow {
+    padding: 8rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.serviceRow:last-child {
+    border-bottom: none;
+}
+
+.serviceContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.serviceContainer.reverse {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+}
+
+.serviceContainer.reverse>* {
+    direction: ltr;
+    /* Reset text direction for children */
+}
+
+.imageBlock {
+    position: relative;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.imageWrapper:hover .image {
+    transform: scale(1.05);
+}
+
+.textBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.serviceTitle {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.serviceDesc {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.featuresList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.featuresList li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--foreground);
+    font-weight: 500;
+}
+
+.featuresList li::before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    top: -2px;
+}
+
+@media (max-width: 900px) {
+
+    .serviceContainer,
+    .serviceContainer.reverse {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        direction: ltr;
+    }
+}

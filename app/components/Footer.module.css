@@ -1,0 +1,91 @@
+.footer {
+    background-color: var(--background);
+    border-top: 1px solid var(--border);
+    padding: 5rem 0 2rem;
+    color: var(--text-muted);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.topSection {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.brand h2 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--foreground);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.est {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.linksColumn h3 {
+    color: var(--foreground);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.linksColumn ul {
+    list-style: none;
+    padding: 0;
+}
+
+.linksColumn li {
+    margin-bottom: 0.75rem;
+}
+
+.linksColumn a {
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.linksColumn a:hover {
+    color: var(--primary);
+}
+
+.linksColumn p {
+    margin-bottom: 0.5rem;
+}
+
+.phone {
+    margin-top: 1rem;
+    color: var(--foreground);
+    font-weight: 600;
+}
+
+.bottomSection {
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .topSection {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
